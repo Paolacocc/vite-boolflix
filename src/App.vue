@@ -37,3 +37,7 @@ export default {
 <AppHeader @filter="handleCall"/>
 <AppCard />
 </template>
+
+<style lang="scss">
+@import "bootstrap/scss/bootstrap";
+</style>

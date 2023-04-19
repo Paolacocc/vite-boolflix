@@ -15,8 +15,10 @@ export default {
 </script>
 
 <template>
-    <h1>header</h1>
+    <div class="header text-center">
+    <h1>HEADER</h1>
     <label for="search"></label>
     <input type="text" id="search" v-model.trim="store.writtenText" @keyup.enter="$emit('filter')">
+</div>
     
 </template>
