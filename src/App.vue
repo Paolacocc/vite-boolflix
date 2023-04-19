@@ -2,12 +2,14 @@
 import AppHeader from "./components/AppHeader.vue"
 import { store } from "./store"
 import axios from "axios";
+import AppCard from "./components/AppCard.vue"
 
 
 export default {
   
   components: {
     AppHeader,
+    AppCard
   },
   data(){
     return {
@@ -22,7 +24,9 @@ export default {
           query: this.store.writtenText
         }
       }).then(resp => {
-        this.store.currentText = resp.data.results.title;
+        console.log(resp);
+        this.store.movies = resp.data.results;
+        // console.log(this.store.currentText);
       })
     }
   }
@@ -31,4 +35,5 @@ export default {
 
 <template>
 <AppHeader @filter="handleCall"/>
+<AppCard />
 </template>
