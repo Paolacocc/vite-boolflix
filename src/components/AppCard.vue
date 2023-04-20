@@ -25,6 +25,7 @@ export default {
         <div class="row">
             <div class="col">
                 <div class="card card-movie" v-for="card in store.movies">
+                    <img :src="`${store.imgPath}${card.poster_path}`" alt="">
                     <h3>{{ card.title }}</h3>
                     <h4>{{ card.original_title }}</h4>
                     <h4>
@@ -38,6 +39,7 @@ export default {
                 </div>
 
                 <div class="card card-tv" v-for="card in store.tvSeries">
+                    <img :src="`${store.imgPath}${card.poster_path}`" alt="">
                     <h3>{{ card.name }}</h3>
                     <h4>{{ card.original_name }}</h4>
                     <h4>
