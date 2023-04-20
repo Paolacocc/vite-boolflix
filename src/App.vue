@@ -17,6 +17,11 @@ export default {
     }
   },
   methods: {
+    showStars() {
+           console.log(this.store.movies.vote_average); 
+
+
+        },
     handleCall(){
       axios.get("https://api.themoviedb.org/3/search/movie", {
         params: {
@@ -44,10 +49,12 @@ export default {
 </script>
 
 <template>
+  
 <AppHeader @filter="handleCall"/>
 <AppCard />
 </template>
 
 <style lang="scss">
+@import "./general.scss";
 @import "bootstrap/scss/bootstrap";
 </style>
